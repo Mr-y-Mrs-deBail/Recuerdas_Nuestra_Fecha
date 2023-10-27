@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Indie+Flower&display=swap');
+
+/* Esto es para el color de fondo del body en modo claro mi amor */
+
+body {
+  background: linear-gradient(270deg, #ffe721, #9dff00, #fde45a, #95b422);
+  background-size: 800% 800%;
+  -webkit-animation: Animation 4s ease infinite;
+  -moz-animation: Animation 4s ease infinite;
+  animation: Animation 4s ease infinite;
+}
+
+@-webkit-keyframes Animation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes Animation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes Animation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* Esto es para el gif de pooh mi amor */
+
+.think{
+    width: 100px;
+}
+
+
+/* Esto es para el título mi amor */
+
+.text-center{
+    font-size: 25px;
+    font-family: 'Indie Flower', cursive;
+}
+
+/* Esto es para el botón de confirmación mi amor */
+
+.btn-primary{
+  font-family: 'DynaPuff', cursive;
+  font-weight: 0;
+  font-size: 14px;
+  color: #050505;
+  background-color: #ffffff;
+  padding: 10px 30px;
+  border: solid #000000 2px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 10px;
+  transition : 1000ms;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 40%;
+  letter-spacing: 2px;
+}
+
+.btn-primary:hover{
+  transition : 1000ms;
+  padding: 10px 40px;
+  transform : translateY(-0px);
+  background-color: #000000;
+  color: #ffffff;
+  border: solid 2px #ffffff;
+  margin-left: 40%;
+}
+
+
+/* Esto es para el color del cuadrado mi amor*/
+.container {
+  background-color: rgba(255, 255, 255, 0.425);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Esto es para un margen del botón mi amor */
+  
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Esto es para el modo oscuro mi amor */
+  
+.dark-mode {
+  background: linear-gradient(36deg, #000000, #525252, #4d4c48);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationDark 16s ease infinite;
+  -moz-animation: AnimationDark 16s ease infinite;
+  animation: AnimationDark 16s ease infinite;
+  color: white;
+}
+
+@-webkit-keyframes AnimationDark {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+@-moz-keyframes AnimationDark {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+@keyframes AnimationDark {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* Esto es para el tamaño y otros estilos de los iconos de modo claro y oscuro mi amor */
+  
+.dark-mode-icon {
+  font-size: 30px;
+}
+  
+.dark-mode-button {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#successModal .modal-title {
+  font-weight: bold;
+}
+
+#successModal .modal-body {
+  background-color: #000000;
+}
+
+#successModal .modal-footer {
+  background-color: #fff;
+}
+
+#successModal .btn {
+  color: rgb(0, 0, 0);
+}
+
+.kiss{
+  width: 20%;
+  margin-left: 380px;
+  margin-top: -80px;
+}
+
+.think-think{
+  width: 13%;  
+}
+
+@media (max-width: 576px) {  
+  .container {
+    margin-top: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  .btn-primary{
+    margin-left: 23%;
+  }
+  .btn-primary:hover{
+    margin-left: 23%;
+  }      
+}
+
+@media screen and (orientation: landscape) {
+  .dark-mode-button {
+    position: absolute;
+    top: 40px;
+  }
+  .container {
+    margin-top: 10%;
+  }
+}

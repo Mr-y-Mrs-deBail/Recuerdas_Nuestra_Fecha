@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>¿Recuerdas nuestra fecha?</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/tigger.png" type="image/x-icon">
+
+</head>
+
+<body>
+  
+  <div class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+
+    
+    <div class="container">
+
+      <h1 class="text-center"><b>¿Recuerdas nuestro lindo aniversario?</b><br> Si lo recuerdas, tendrás una linda sorpresa mi amor… <br> <img class="think" src="img/think.gif" alt=""></h1>
+
+      <form id="loginForm">
+        <div class="form-group"> ヾ(๑╹ꇴ◠๑)ﾉ”～ ♡ Aniversario de novios 
+          <input type="date" class="form-control" id="fecha" required>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Confirmar 😍</button>
+        </div>
+
+      </form>
+
+      <button id="darkModeToggle" class="btn btn-dark dark-mode-button">
+        <i class="fas fa-moon dark-mode-icon"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="errorModalLabel" style="color: rgb(0, 0, 0);"> <img class="think-think" src="img/think-think.gif" alt=""> Mmmmm.... <br> Por qué te confundiste mi amor <br> ( -_・)? <br> buuuuuuu😥</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="color: rgb(0, 0, 0);">
+          <p>(;´ - `)> Esa no es la fecha correcta mi amor, <br> que malo eres ｡:ﾟ(;´∩`;)ﾟ:｡. <br> <br> Vuelve a intentarlo mi súper esposo <br> ｡ﾟ✶ฺ.( ᴖ◡ᴖ*)ﾉ.✶ฺﾟ｡, pero recuerda que te súper amooooOOO♡ (୨୧ ❛ᴗ❛)♡ con toda mi alma y corazón ♡</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #ffffff;">
+          <h5 class="modal-title" id="successModalLabel" style="color: rgb(0, 0, 0);">(人´∀`)♡° Uyyyy gracias por recordarte de nuestra linda fecha mi amor!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="background-color: #ffffff;">
+          <p style="color: #000000;"> Eres la personita más linda de toda la galaxia.•♡⋆*ೃ:.✧, <br> Por eso te súper amoooOOOOOOOOOO♡ <br> Ahora al presionar continuar (◍˃ᗜ˂◍)ﾉ”❤ , esta linda página te va a redireccionar a tu linda sorpresa mi amor Uyyyyyyy...  <br> Espero te súper encante!</p>
+        <img class="kiss" src="img/kiss.gif" alt="">
+          <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Continuar</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Esto es para java mi amor, te amooooOOOOO -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+  
+  <script>
+
+    $(document).ready(function() {
+
+      var correctDate = new Date("2012-06-13");
+      
+      $("#loginForm").submit(function(event) {
+        event.preventDefault();
+        
+        var inputDate = new Date($("#fecha").val());
+        
+        if (inputDate.toDateString() === correctDate.toDateString()) {
+
+            $("#successModal").modal("show");
+            
+            $("#successModal").on("hidden.bs.modal", function () {
+            
+            window.location.href = "https://mr-y-mrs-debail.github.io/Conteo-regresivo/";
+        });
+            
+        } else {
+
+            $("#errorModal").modal("show");
+        }
+      });
+
+     // Esto es para el modo claro y oscuro mi amor
+
+      $("#darkModeToggle").click(function() {
+        $("body").toggleClass("dark-mode");
+        $("#darkModeToggle").find("i").toggleClass("fa-moon fa-sun");
+      });
+    });
+    
+  </script>
+
+<script>
+
+  Swal.fire({
+      title: '<b>Shht Shht... <br> Mi amor, ¿te sientes preparado?</b>',
+      text: '¡Para una pregunta muy fácil!. Espero que sí, te AmoOOOOOOoooo mi súper esposo, siempre juntos.',
+      imageUrl: 'https://media.tenor.com/tMQO2GU6nAcAAAAi/pooh-friends.gif',
+      imageWidth: '250px',
+      imageAlt: 'pooh',
+      customClass: {
+        title: 'titulo'
+      },
+      backdrop: true,
+      timer: 10000,
+      timerProgressBar: true,
+      showConfirmButton: false
+    });
+  
+  </script>
+    
+</body>
+</html>
